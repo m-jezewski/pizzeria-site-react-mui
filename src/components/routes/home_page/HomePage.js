@@ -56,7 +56,7 @@ const Main = () => {
                 <Typography variant='h3'>our App</Typography>
                 <Divider className={classes.blackDivider} />
                 <Typography variant='h6' color='secondary.light' mt={4}>Collect our loyalty points and get access to new discounts!</Typography>
-                <img src={appstoreImg} className={classes.appStoresImg} alt='Appstores icons' onClick={() => { setOpenAlert(true) }} />
+                <a href='#' onClick={(e) => { e.preventDefault(); setOpenAlert(true) }}><img src={appstoreImg} className={classes.appStoresImg} alt='Appstores' /> </a>
             </Grid>
             <Grid item xs={12} md={6}>
                 <picture>
