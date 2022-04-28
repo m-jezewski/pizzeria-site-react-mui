@@ -1,4 +1,4 @@
-import { Typography, Divider, IconButton, ListItem } from '@mui/material'
+import { Typography, IconButton, ListItem } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete';
 import cartListItemStyles from './cartListItemStyles';
 
@@ -20,7 +20,6 @@ const CartListItem = ({ item, removeCartItem }) => {
                 <Typography variant='subtitle2'>{item.variant.size}</Typography>
                 <Typography variant='subtitle1'>{item.variant.price} PLN</Typography>
             </ListItem>
-            <Divider variant='fullwidth' color='#8E8E8E' className={classes.divider} />
         </>
     );
 }

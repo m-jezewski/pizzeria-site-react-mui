@@ -1,6 +1,6 @@
-import pizzaItemImg from './assets/pizzaItemImg.jpg'
-import colaItemImg from './assets/cola.jpg'
-import burgerItemImg from './assets/burgerItem.jpg'
+import pizzaItemImg from './assets/pizzaItemImg.webp'
+import colaItemImg from './assets/cola.webp'
+import burgerItemImg from './assets/burgerItem.webp'
 
 const menuData = {
     pizzaList: [

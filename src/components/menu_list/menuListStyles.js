@@ -7,7 +7,11 @@ const menuListStyles = makeStyles((theme) => ({
         minHeight: '500px',
         maxHeight: '63vh',
         marginBottom: theme.spacing(5),
-        marginTop: theme.spacing(3)
+        marginTop: theme.spacing(3),
+        [theme.breakpoints.down('sm')]: {
+            overflowY: 'hidden',
+            maxHeight: 'none',
+        }
     }
 }))
 

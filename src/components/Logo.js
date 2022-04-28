@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Logo = () => {
     return (
-        <Link to='/' style={{ textDecoration: 'none' }}>
+        <Link to='/' label='Logo, link to home page' style={{ textDecoration: 'none' }}>
             <Box sx={theme => ({
                 display: 'flex',
                 color: 'primary.light',

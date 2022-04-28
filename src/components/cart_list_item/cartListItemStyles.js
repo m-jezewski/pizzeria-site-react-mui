@@ -7,6 +7,8 @@ const cartListItemStyles = makeStyles((theme) => ({
         alignItems: 'center',
         justifyContent: 'space-between',
         paddingBottom: theme.spacing(1),
+        borderBottom: 'solid 1px',
+        borderBottomColor: theme.palette.primary.grey,
         [theme.breakpoints.down('sm')]: { flexDirection: 'column' }
     },
 
@@ -15,11 +17,6 @@ const cartListItemStyles = makeStyles((theme) => ({
         color: theme.palette.primary.dark,
         '&:hover': { backgroundColor: theme.palette.secondary.light }
     },
-
-    divider: {
-        borderColor: theme.palette.primary.grey
-    }
-
 }))
 
 export default cartListItemStyles

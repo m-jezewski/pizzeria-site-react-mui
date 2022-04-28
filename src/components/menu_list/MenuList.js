@@ -7,7 +7,7 @@ const MenuList = ({ list, handleMenuItemSubmit, value, index }) => {
     const classes = menuListStyles()
 
     return (
-        <List component='div' role='tabpanel' hidden={value !== index} className={[classes.container, 'styled-scrollbars'].join(' ')}>
+        <List role='tabpanel' hidden={value !== index} className={[classes.container, 'styled-scrollbars'].join(' ')}>
             {
                 list.map(item => (
                     <MenuListItem key={item.id} item={item} handleMenuItemSubmit={handleMenuItemSubmit}></MenuListItem>

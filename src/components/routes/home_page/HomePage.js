@@ -1,13 +1,16 @@
 import { Box, Typography, Divider, Grid, Button } from '@mui/material/'
-import homeImage from '../../../assets/homePage1-full.jpg'
-import homeImage1920 from '../../../assets/homePage1-1920.jpg'
-import homeImage1366 from '../../../assets/homePage1-1366.jpg'
-import homeImage900 from '../../../assets/homePage1-900.jpg'
-import pizzaItem from '../../../assets/pizzaItem.jpg'
-import lastSection600 from '../../../assets/homePage2.jpg'
-import lastSection1366 from '../../../assets/homePage2-1366.jpg'
-import lastSection1920 from '../../../assets/homePage2-1920.jpg'
-import appstoreImg from '../../../assets/appstore.png'
+import homeImage from '../../../assets/homePage1-full.webp'
+import homeImage1920 from '../../../assets/homePage1-1920.webp'
+import homeImage1366 from '../../../assets/homePage1-1366.webp'
+import homeImage900 from '../../../assets/homePage1-900.webp'
+import pizzaItemFull from '../../../assets/pizzaItem.webp'
+import pizzaItem1366 from '../../../assets/pizzaItem-1336.webp'
+import pizzaItem900 from '../../../assets/pizzaItem-900.webp'
+
+import lastSection600 from '../../../assets/homePage2.webp'
+import lastSection1366 from '../../../assets/homePage2-1366.webp'
+import lastSection1920 from '../../../assets/homePage2-1920.webp'
+import appstoreImg from '../../../assets/appstore.webp'
 import NavButton from '../../navbar/NavButton.js'
 import { useOutletContext } from 'react-router-dom'
 import homePageStyles from './homePageStyles'
@@ -33,7 +36,12 @@ const Main = () => {
                 <Typography variant='h2' fontFamily='Mea Culpa'>Your little Italy</Typography>
             </Grid>
             <Grid component='section' item xs={12} md={6}>
-                <img className={classes.sideSectionImage} src={pizzaItem} alt='Pizza' />
+                <picture>
+                    <source srcSet={pizzaItemFull} media="(min-width: 1920px)"></source>
+                    <source srcSet={pizzaItem1366} media="(min-width: 1366px)"></source>
+                    <source srcSet={pizzaItem900} media="(min-width: 900px)"></source>
+                    <img className={classes.sideSectionImage} src={pizzaItem900} alt='Pizza' />
+                </picture>
             </Grid>
             <Grid className={classes.sideSection} component='section' item xs={12} md={6}>
                 <Typography variant='h1' fontWeight='500' >-50%!</Typography>

@@ -1,5 +1,5 @@
 import { makeStyles } from '@mui/styles';
-import blackSectionBackground from '../../../assets/blackBackground.png'
+import blackSectionBackground from '../../../assets/blackBackground.webp'
 
 const footerStyles = makeStyles((theme) => ({
     frontImage: {
