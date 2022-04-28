@@ -28,7 +28,7 @@ const App = () => {
 
                 <NavBar handleContactButtonCLick={handleContactButtonCLick}></NavBar>
                 <Outlet context={{ handleContactButtonCLick, openAlert, setOpenAlert }}></Outlet>
-                <Footer></Footer>
+                <Footer setOpenAlert={setOpenAlert}></Footer>
             </Stack>
         </ThemeProvider>
     );
