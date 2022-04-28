@@ -1,5 +1,4 @@
-import { Stack, List, Typography, Divider, Box } from '@mui/material'
-import PageButton from '../PageButton'
+import { Stack, List, Typography, Divider, Box, Button } from '@mui/material'
 import React from 'react'
 import CartListItem from '../cart_list_item/CartListItem'
 import { useOutletContext } from 'react-router-dom'
@@ -33,7 +32,7 @@ const Cart = ({ cartItemList, removeCartItem }) => {
                 <Typography variant='h3' textAlign='right' mt={1}>
                     {totalPrice()} PLN
                 </Typography>
-                <PageButton sx={{ m: 0, mt: 1, }} fullWidth onClick={() => { setOpenAlert(true); }} >Order</PageButton>
+                <Button variant='pageButton' sx={{ m: 0, mt: 1, }} fullWidth onClick={() => { setOpenAlert(true); }} >Order</Button>
             </Box>
         </Stack >
     );

@@ -32,14 +32,16 @@ const menuListItemStyles = makeStyles((theme) => ({
     },
 
     productImage: {
-        minWidth: '110px',
-        width: '15%',
+        width: '110px',
         objectFit: 'contain'
     },
 
     form: {
         minWidth: '10em',
-        width: '100%'
+        width: '40%',
+        [theme.breakpoints.down('md')]: {
+            width: '100%',
+        }
     },
 
     inputLabel: {

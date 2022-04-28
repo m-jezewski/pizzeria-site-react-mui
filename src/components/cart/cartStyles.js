@@ -2,6 +2,7 @@ import { makeStyles } from '@mui/styles';
 
 const cartStyles = makeStyles((theme) => ({
     container: {
+        boxSizing: 'border-box',
         backgroundColor: theme.palette.secondary.dark,
         borderRadius: '6px',
         minHeight: '500px', height: '75vh',
@@ -9,9 +10,8 @@ const cartStyles = makeStyles((theme) => ({
         minWidth: '18em', width: '100%', maxWidth: '20vw',
         justifyContent: 'space-between',
         [theme.breakpoints.down('md')]: {
-            minHeight: '0px',
+            maxWidth: '100%',
             height: '35vh',
-            minWidth: '100%',
         }
     },
 

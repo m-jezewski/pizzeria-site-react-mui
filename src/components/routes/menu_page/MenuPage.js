@@ -3,12 +3,15 @@ import * as React from 'react';
 import Cart from '../../cart/Cart'
 import MenuTabs from '../../menu_tabs/MenuTabs'
 import menuPageStyles from './menuPageStyles'
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 
 let cartCounter = 0
 
 const Menu = () => {
     const classes = menuPageStyles()
     const [cartItemList, setCartItemList] = React.useState([])
+    const smQuery = useMediaQuery('(min-width:600px)')
 
     const handleMenuItemSubmit = (item) => {
         setCartItemList([...cartItemList, { ...item, cartID: cartCounter }])
@@ -23,7 +26,7 @@ const Menu = () => {
         <Grid
             container
             component='section'
-            columnSpacing={10}
+            columnSpacing={smQuery ? 10 : 2}
             rowSpacing={4}
             className={classes.container}
         >

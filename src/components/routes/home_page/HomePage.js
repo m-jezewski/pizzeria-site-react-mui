@@ -1,8 +1,12 @@
-import { Box, Typography, Divider, Grid } from '@mui/material/'
-import PageButton from '../../PageButton'
-import homeImage from '../../../assets/homePizza.jpg'
+import { Box, Typography, Divider, Grid, Button } from '@mui/material/'
+import homeImage from '../../../assets/homePage1-full.jpg'
+import homeImage1920 from '../../../assets/homePage1-1920.jpg'
+import homeImage1366 from '../../../assets/homePage1-1366.jpg'
+import homeImage900 from '../../../assets/homePage1-900.jpg'
 import pizzaItem from '../../../assets/pizzaItem.jpg'
-import homeImage2 from '../../../assets/homePizza-2.jpg'
+import lastSection600 from '../../../assets/homePage2.jpg'
+import lastSection1366 from '../../../assets/homePage2-1366.jpg'
+import lastSection1920 from '../../../assets/homePage2-1920.jpg'
 import appstoreImg from '../../../assets/appstore.png'
 import NavButton from '../../navbar/NavButton.js'
 import { useOutletContext } from 'react-router-dom'
@@ -16,7 +20,13 @@ const Main = () => {
     return (
         <Grid container spacing={0}>
             <Grid component='section' item xs={12}>
-                <img src={homeImage} alt='pizza' className={classes.frontImage} />
+                <picture>
+                    <source srcSet={homeImage} media="(min-width: 2500px)"></source>
+                    <source srcSet={homeImage1920} media="(min-width: 1920px)"></source>
+                    <source srcSet={homeImage1366} media="(min-width: 1366px)"></source>
+                    <source srcSet={homeImage900} media="(min-width: 900px)"></source>
+                    <img src={homeImage900} alt='pizza' className={classes.frontImage} />
+                </picture>
             </Grid>
             <Grid className={classes.fullWidthSection} component='section' item xs={12}>
                 <Typography variant='h1' fontWeight={100} fontFamily='Mea Culpa'>Luigi's Pizza</Typography>
@@ -37,7 +47,7 @@ const Main = () => {
                 <Typography variant='h3'>About us</Typography>
                 <Typography variant='subtitle1' sx={{ maxWidth: '60em' }}>Pizza ipsum dolor amet mozzarella thin crust garlic NY style ham hawaiian. Fresh tomatoes chicken party sauteed onions hawaiian, peppers pan pepperoni. Chicken wing green bell peppers thin crust, string cheese buffalo sauce red onions meatball hawaiian broccoli parmesan party pesto pan.</Typography>
                 <Box>
-                    <PageButton onClick={handleContactButtonCLick}>Contact</PageButton>
+                    <Button variant='pageButton' onClick={handleContactButtonCLick}>Contact</Button>
                     <NavButton pageButton path='/Menu'>Menu</NavButton>
                 </Box>
             </Grid>
@@ -49,7 +59,12 @@ const Main = () => {
                 <img src={appstoreImg} className={classes.appStoresImg} alt='Appstores icons' onClick={() => { setOpenAlert(true) }} />
             </Grid>
             <Grid item xs={12} md={6}>
-                <img className={classes.sideSectionImage} src={homeImage2} alt='Pizza' />
+                <picture>
+                    <source srcSet={lastSection1920} media="(min-width: 1920px)"></source>
+                    <source srcSet={lastSection1366} media="(min-width: 1366px)"></source>
+                    <source srcSet={lastSection600} media="(min-width: 900px)"></source>
+                    <img className={classes.sideSectionImage} src={lastSection600} alt='Pizza' />
+                </picture>
             </Grid>
         </Grid >
     );

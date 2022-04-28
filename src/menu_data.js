@@ -15,11 +15,10 @@ const menuData = {
             variant2: { size: '45cm', price: 33.50 },
         },
         {
-            id: 3, title: 'Bolognese', description: 'cheese, tomato, pizza sauce, ham, mushrooms, oregano', imageSrc: pizzaItemImg, imageAlt: 'Bolognese',
+            id: 3, title: 'Capricciosa', description: 'cheese, tomato, pizza sauce, ham, mushrooms, oregano', imageSrc: pizzaItemImg, imageAlt: 'Capricciosa',
             variant1: { size: '32cm', price: 27.50 },
             variant2: { size: '45cm', price: 34.50 },
         },
-
         {
             id: 4, title: 'Frutti di mare', description: 'cheese, tomato, pizza sauce, ham, mushrooms, oregano', imageSrc: pizzaItemImg, imageAlt: 'Frutti di mare',
             variant1: { size: '32cm', price: 30.00 },
@@ -31,17 +30,17 @@ const menuData = {
             variant2: { size: '45cm', price: 27.50 },
         },
         {
-            id: 6, title: 'Miesna w chuj', description: 'cheese, tomato, pizza sauce, ham, mushrooms, oregano', imageSrc: pizzaItemImg, imageAlt: 'Miesna w chuj',
+            id: 6, title: 'Bolognese', description: 'cheese, tomato, pizza sauce, ham, mushrooms, oregano', imageSrc: pizzaItemImg, imageAlt: 'Bolognese',
             variant1: { size: '32cm', price: 29.50 },
             variant2: { size: '45cm', price: 29.50 },
         },
         {
-            id: 7, title: 'Wiejska', description: 'cheese, tomato, pizza sauce, ham, mushrooms, oregano', imageSrc: pizzaItemImg, imageAlt: 'Wiejska',
+            id: 7, title: 'Prosciutto ', description: 'cheese, tomato, pizza sauce, ham, mushrooms, oregano', imageSrc: pizzaItemImg, imageAlt: 'Prosciutto ',
             variant1: { size: '32cm', price: 27.50 },
             variant2: { size: '45cm', price: 27.50 },
         },
         {
-            id: 8, title: 'boczek z pizza', description: 'cheese, tomato, pizza sauce, ham, mushrooms, oregano', imageSrc: pizzaItemImg, imageAlt: 'boczek z pizza',
+            id: 8, title: 'Marinara', description: 'cheese, tomato, pizza sauce, ham, mushrooms, oregano', imageSrc: pizzaItemImg, imageAlt: 'Marinara',
             variant1: { size: '32cm', price: 25.50 },
             variant2: { size: '45cm', price: 25.50 },
         },
@@ -58,7 +57,7 @@ const menuData = {
             variant1: { size: '500ml', price: 6.20 },
         },
         {
-            id: 2, title: 'Orange juice', description: 'juice from real oragnes or something', imageSrc: colaItemImg, imageAlt: 'Coca-Cola',
+            id: 2, title: 'Cool Cola', description: 'very cool cola or something', imageSrc: colaItemImg, imageAlt: 'Coca-Cola',
             variant1: { size: '450ml', price: 7.20 },
         },
     ],

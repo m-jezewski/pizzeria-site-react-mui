@@ -1,5 +1,4 @@
-import { Container, Typography, Box, TextField, Grid } from '@mui/material'
-import PageButton from '../../PageButton'
+import { Container, Typography, Box, TextField, Grid, Button } from '@mui/material'
 import React from 'react'
 import { useOutletContext } from 'react-router-dom';
 import registerPageStyles from './registerPageStyles'
@@ -21,9 +20,9 @@ const Register = () => {
                         <Grid item xs={12}><TextField className={classes.textInput} variant='filled' label='Email Address' placeholder="Email Address" /></Grid>
                         <Grid item xs={12}><TextField className={classes.textInput} variant='filled' label='Password' placeholder="Password" type='password' /></Grid>
                     </Grid>
-                    <PageButton onClick={() => { setOpenAlert(true); }} sx={{ m: 0, mt: 2.5, p: 2, pl: 5, pr: 5 }}>
+                    <Button variant='pageButton' onClick={() => { setOpenAlert(true); }} sx={{ m: 0, mt: 2.5, p: 2, pl: 5, pr: 5 }}>
                         Register
-                    </PageButton>
+                    </Button>
                 </form>
             </Box>
         </Container>

@@ -1,6 +1,5 @@
-import { Paper, Select, Typography, MenuItem, InputLabel, Box, FormControl, ListItem } from '@mui/material';
+import { Paper, Select, Typography, MenuItem, InputLabel, Box, FormControl, ListItem, Button } from '@mui/material';
 import * as React from 'react';
-import PageButton from '../PageButton'
 import menuListItemStyles from './menuListItemStyles'
 
 const MenuListItem = ({ item, handleMenuItemSubmit }) => {
@@ -47,9 +46,9 @@ const MenuListItem = ({ item, handleMenuItemSubmit }) => {
                             <MenuItem value={item.variant1}>{item.variant1.size} - {item.variant1.price}PLN</MenuItem>
                             {item.variant2 && <MenuItem value={item.variant2}>{item.variant2.size} - {item.variant2.price}PLN</MenuItem>}
                         </Select>
-                        <PageButton type='submit' sx={{ m: 0, p: 1 }}>
+                        <Button variant='pageButton' type='submit' sx={{ m: 0, p: 1 }}>
                             Add to Cart
-                        </PageButton>
+                        </Button>
                     </FormControl>
                 </form>
             </Paper>

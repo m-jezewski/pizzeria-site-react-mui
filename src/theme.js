@@ -15,12 +15,31 @@ let theme = createTheme({
         },
     },
 
-    components: {
-
-    },
-
     typography: {
         fontFamily: '"Montserrat", "Mea Culpa"',
+    },
+});
+
+theme = createTheme(theme, {
+    components: {
+        MuiButton: {
+            variants: [
+                {
+                    props: { variant: 'pageButton' },
+                    style: {
+                        backgroundColor: theme.palette.primary.light,
+                        color: theme.palette.primary.dark,
+                        margin: theme.spacing(2),
+                        padding: theme.spacing(2),
+                        paddingLeft: theme.spacing(4),
+                        paddingRight: theme.spacing(4),
+                        '&:hover': {
+                            backgroundColor: theme.palette.secondary.light
+                        }
+                    }
+                },
+            ]
+        }
     },
 });
 

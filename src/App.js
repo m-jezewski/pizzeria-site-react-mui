@@ -10,10 +10,9 @@ import SnackbarAlert from './components/SnackbarAlert';
 import theme from './theme.js'
 
 const App = () => {
-    // ogarnij zdjecia  ta k zeby n ie adow  ac za kaz dym razem 1920px jak to nie potrzebne ;)
-    // MenuPage => counter ogarnij
 
     const [openContactCard, setOpenContactCard] = React.useState(false);
+    const [openAlert, setOpenAlert] = React.useState(false);
 
     const handleContactButtonCLick = () => {
         setTimeout(() => {
@@ -21,17 +20,14 @@ const App = () => {
         }, 0);
     };
 
-    const [openAlert, setOpenAlert] = React.useState(false);
-
-
     return (
         <ThemeProvider theme={theme}>
-            <Stack spacing={0} sx={{ minHeight: '100vh', justifyContent: 'space-between' }}>
+            <Stack spacing={0} sx={{ minHeight: '100vh', justifyContent: 'space-between', minWidth: '300px', overflowX: 'unset' }}>
                 <ContactCard openContactCard={openContactCard} setOpenContactCard={setOpenContactCard} />
                 <SnackbarAlert openAlert={openAlert} setOpenAlert={setOpenAlert} />
 
                 <NavBar handleContactButtonCLick={handleContactButtonCLick}></NavBar>
-                <Outlet context={{ handleContactButtonCLick, openAlert, setOpenAlert }} ></Outlet>
+                <Outlet context={{ handleContactButtonCLick, openAlert, setOpenAlert }}></Outlet>
                 <Footer></Footer>
             </Stack>
         </ThemeProvider>
