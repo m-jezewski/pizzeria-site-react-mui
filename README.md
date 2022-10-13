@@ -1,6 +1,6 @@
 ### Pizzeria website
 
-Demo at https://karriuz-pizzeria.netlify.app
+Demo at https://mjezewski-pizzeria.netlify.app
 
 This project is simple pizzeria website made with React and Material UI.
 
